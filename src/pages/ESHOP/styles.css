@@ -1,0 +1,223 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+/*Colors*/
+:root {
+    --white: #FFFFFF;
+    --yellow: #FFFF00;
+    --light-yellow: #F8F184;
+    --blue: #19587D;
+    --red: #B11313;
+    --grey: #C4C4C4;
+}
+
+
+.white {
+    color: var(--white);
+}
+
+.black {
+    color: #000000;
+}
+
+.yellow {
+    color: var(--yellow);
+}
+
+.light-yellow {
+    color: var(--light-yellow);
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.red {
+    color: var(--red);
+}
+
+.grey {
+    color: var(--grey);
+}
+
+
+h1 {
+    font-family: rajdhani, Arial, sans-serif;
+    font-size: 36px;
+}
+
+button {
+    font-family: rajdhani, Arial, sans-serif;
+    font-size: 20px;
+}
+
+h2 {
+    font-family: spaceGrotesk-Bold, Arial, sans-serif;
+    font-size: 12px;
+}
+
+p {
+    font-family: spaceGrotesk, Arial, sans-serif;
+    font-size: 18px;
+}
+
+.spaceGrotesk {
+    font-family: spaceGrotesk, Arial, sans-serif;
+}
+
+/* Set the hero section to occupy the full height of the viewport */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url('/src/assets/bg/bg_1.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/*Navbar*/
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999; /* Ensure the navbar appears above other elements */
+}
+
+/* Style the logo */
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 100px;
+}
+
+/* Style the navigation links */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-right: 100px;
+}
+
+.navbar li {
+    margin-left: 10px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#game {
+    margin-left: 25px;
+    text-decoration: underline;
+}
+
+
+
+.hero h1 {
+    margin-left: 200px;
+}
+
+#arrowDown {
+    margin: 100px 0;
+}
+
+#divGame {
+    text-align: center;
+    margin-bottom: 150px;
+    color: white;
+}
+
+#connaissez-vous {
+    color: #99C1DA;
+}
+
+.demarrer {
+    margin-top: 40px;
+    border-radius: 0;
+    padding: 10px 10px;
+    background: linear-gradient(to left, rgba(137, 0, 8, 0.6) 0%, rgba(252, 232, 216, 0.4) 100%);
+    color: white;
+    margin-bottom: 50px;
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+footer .flex p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 75%;
+    margin-bottom: 50px;
+}
+
+footer .flex p img {
+    margin-right: 10px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons img:not(:last-child, .logo-sayna, .x-white-3) {
+    margin-right: 32px;
+}
+
+.logo-sayna, .x-white-3 {
+    margin-right: 10px;
+}
+
+.answer {
+    background: #757575;
+    width: 508px;
+    height: 42px;
+    text-align: left;
+    font-family: spaceGrotesk, Arial, sans-serif;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.answer input[type="checkbox"] {
+    transform: scale(2.5);
+    margin: 0 15px;
+}
+
+#divAnswer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inactive {
+    text-decoration: none !important;
+}
+
+.card-body{
+    background-color: black;
+    color: #FFFFFF;
+    border: none;
+}
+
+.card {
+    border-radius: 0;
+}
