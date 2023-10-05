@@ -1,11 +1,12 @@
 import './styles.css';
 import Header from "./Header";
+import MonProfil from "./MonProfil";
 
 const Eshop = () => {
     return (
         <>
             <Header/>
-
+            <MonProfil/>
             <footer className="footer">
                 <div className="flex-col flex">
                     <p className="white">

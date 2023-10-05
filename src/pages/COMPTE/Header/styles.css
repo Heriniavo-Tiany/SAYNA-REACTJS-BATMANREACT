@@ -1,0 +1,200 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.containerInfos {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: #000000;
+    align-items: center;
+    justify-content: center;
+}
+
+.infos {
+    display: flex;
+    width: 80%;
+    height: auto;
+    background-color: #000000;
+    color: #f1f1f1;
+    font-family: "rajdhani", "sans-serif";
+    align-items: start;
+    justify-content: center;
+}
+
+.infoMenu {
+    width: 30%;
+    height: auto;
+    margin-top: 60px;
+}
+
+.infoMenu ul {
+    padding-left: 0;
+}
+
+.logOut,
+.modifier,
+.enregistrer,
+.cartButton button {
+    width: 250px;
+    height: 50px;
+    color: #f1f1f1;
+    line-height: 100%;
+    border: none;
+    font-family: "rajdhani", "sans-serif";
+    font-size: 1.3em;
+    text-transform: uppercase;
+    background: linear-gradient(273.81deg, rgba(2, 62, 112, 0.4) 0%, rgba(110, 184, 245, 0.4) 100%);
+}
+
+.cartButton button a {
+    color: #f1f1f1;
+    line-height: 100%;
+    text-decoration: none;
+}
+
+.infosPersNewsLetter {
+    width: 40%;
+}
+
+.InfoPers,
+.NewsLetter {
+    border-left: 1px solid #f1f1f1;
+    margin-bottom: 50px;
+    padding: 50px 50px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.InfoPers h2,
+.NewsLetter h2 {
+    font-weight: bold;
+}
+
+.YN {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cartItems {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: #000;
+    border: 1px solid #f1f1f1;
+    margin-bottom: 20px;
+}
+
+.cart {
+    width: 100%;
+    padding: 20px 9.5%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #000;
+    color: #f1f1f1;
+}
+
+.cartItem {
+    width: 100%;
+    height: 200px;
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.productImage {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageCarte {
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+}
+
+.description {
+    width: 50%;
+    min-width: 380px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.productDescription,
+.productPrice {
+    width: 50%;
+    align-items: center;
+}
+
+.inputCount,
+.countArticle button {
+    width: 10%;
+    font-size: 16px;
+    border: none;
+    color: #333;
+}
+
+.delBtn {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    color: #fce8d8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.subTotal {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: "rajdhani", "sans-serif";
+}
+
+.cartButton {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.cartButton button {
+    margin-left: 50px;
+}
+
+.cart h4 {
+    color: #890008;
+}
