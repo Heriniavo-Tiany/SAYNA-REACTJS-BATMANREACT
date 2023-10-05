@@ -1,0 +1,70 @@
+
+.containerFilter {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    background-color: #000000;
+}
+
+.Filter {
+    width: 25%;
+    min-width: 300px;
+    padding-top: 100px;
+    padding-left: 20px;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: #f1f1f1;
+    font-family: "Rajdhani";
+}
+
+.dropdownCateg {
+    width: 100%;
+}
+
+.dropDownTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+
+}
+
+.hrFilter {
+    border: 1px solid #ffffff;
+    margin-bottom: 20px;
+}
+
+.CategCheck, .ColorCheck, .UniversCheck {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkItems, .checkCouleur, .checkUnivers {
+    display: flex;
+    align-items: center;
+}
+
+input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    accent-color: red;
+}
+
+input[type="range"] {
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: block;
+    height: 2px;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+}
+

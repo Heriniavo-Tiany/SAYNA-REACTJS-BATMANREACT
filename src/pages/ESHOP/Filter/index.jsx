@@ -1,100 +1,100 @@
+import React, { useState } from 'react';
 import './styles.css';
 
 const Filter = () => {
+    const [showCategories, setShowCategories] = useState(true);
+    const [showUniverses, setShowUniverses] = useState(true);
+    const [showColors, setShowColors] = useState(true);
+
     return (
-        <> <h1 className="white">Filtres</h1>
-            <form action="#">
-                <p>Prix</p>
-                <input type="range" min={0} max={200}/>
+        <div className="containerFilter">
+            <div className="Filter">
+                <h1>Filtres</h1>
+                <label htmlFor="prix">Prix</label>
+                <input type="range" id="prix" name="prix" min="0" max="200" step="1" />
 
-                <div>
-                    <p>Catégorie</p>
-                    <hr/>
+                <div className="dropdownCateg">
+                    <div className="dropDownTitle" onClick={() => setShowCategories(!showCategories)}>
+                        <p>Catégorie</p>
+                        <i class="bi bi-chevron-right"></i>
 
-                    <div>
-                        <input type="checkbox" id="Bestsellers"/> <label
-                        htmlFor="Bestsellers">Bestsellers</label>
-                        <span className="nb">(123)</span>
                     </div>
 
-                    <div>
-                        <input type="checkbox" id="Goodies"/> <label htmlFor="Goodies">Goodies</label>
-                        <span className="nb">(456)</span>
-                    </div>
-
-
-                    <div>
-                        <input type="checkbox" id="Vetements"/> <label htmlFor="Vetements">Vêtements</label>
-                        <span className="nb">(789)</span>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" id="Affiches"/> <label
-                        htmlFor="Affiches">Affiches/posters</label>
-                        <span className="nb">(321)</span>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" id="Comics"/> <label htmlFor="Comics">Comics</label>
-                        <span className="nb">(567)</span>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" id="Multimedia"/> <label htmlFor="Multimedia">Multimédia</label>
-                        <span className="nb">(234)</span>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" id="Equipement"/> <label htmlFor="Equipement">Équipement</label>
-                        <span className="nb">(890)</span>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" id="Bijoux"/> <label htmlFor="Bijoux">Bijoux</label>
-                        <span className="nb">(432)</span>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" id="Vehicules"/> <label htmlFor="Vehicules">Véhicules</label>
-                        <span className="nb">(123)</span>
-                    </div>
-
-                    <div>
-                        <p>Couleur</p>
-                        <hr/>
-
-                        <p>Univers</p>
-                        <hr/>
-
-                        <div>
-                            <input type="checkbox" id="Universe1"/> <label htmlFor="Universe1">The
-                            Batman</label>
+                    <div className="hrFilter"></div>
+                    {showCategories && (
+                        <div className="CategCheck Menu">
+                            <CategoryCheckbox label="Bestsellers" />
+                            <CategoryCheckbox label="Goodies" />
+                            <CategoryCheckbox label="Vêtements" />
+                            <CategoryCheckbox label="Affiches/Posters" />
+                            <CategoryCheckbox label="Comics" />
+                            <CategoryCheckbox label="Multimédia" />
+                            <CategoryCheckbox label="Equipement" />
+                            <CategoryCheckbox label="Bijoux" />
+                            <CategoryCheckbox label="Véhicule" />
                         </div>
-
-                        <div>
-                            <input type="checkbox" id="Universe2"/> <label htmlFor="Universe2">The Dark Knight
-                            Rises</label>
-                        </div>
-
-                        <div>
-                            <input type="checkbox" id="Universe3"/> <label htmlFor="Universe3">Batman V
-                            Superman</label>
-                        </div>
-
-                        <div>
-                            <input type="checkbox" id="Universe4"/> <label htmlFor="Universe4">Batman et
-                            Robin</label>
-                        </div>
-
-                        <div>
-                            <input type="checkbox" id="Universe5"/> <label htmlFor="Universe5">Autres (comics,
-                            dessin animés)</label>
-                        </div>
-
-                    </div>
+                    )}
                 </div>
-            </form>
-        </>
-    )
-}
+
+                <div className="dropdownCateg">
+                    <div className="dropDownTitle" onClick={() => setShowColors(!showColors)}>
+                        <p>Couleur</p>
+                        {/*<MdKeyboardArrowRight />*/}
+                    </div>
+
+                    <div className="hrFilter"></div>
+                    {showColors && (
+                        <div className="ColorCheck">
+                            <ColorCheckbox label="Bleu" />
+                            <ColorCheckbox label="Noir" />
+                            <ColorCheckbox label="Rouge" />
+                            <ColorCheckbox label="Blanc" />
+                            <ColorCheckbox label="Autres couleurs" />
+                        </div>
+                    )}
+                </div>
+
+                <div className="dropdownCateg">
+                    <div className="dropDownTitle" onClick={() => setShowUniverses(!showUniverses)}>
+                        <p>Univers</p>
+                        {/*<MdKeyboardArrowRight />*/}
+                    </div>
+
+                    <div className="hrFilter"></div>
+                    {showUniverses && (
+                        <div className="UniversCheck">
+                            <UniverseCheckbox label="The Batman" />
+                            <UniverseCheckbox label="The Dark Knight Rises" />
+                            <UniverseCheckbox label="Batman V Superman" />
+                            <UniverseCheckbox label="Batman et Robin" />
+                            <UniverseCheckbox label="Autres comics" />
+                        </div>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+};
+
+const CategoryCheckbox = ({ label }) => (
+    <li className="checkItems">
+        <input type="checkbox" name={label} id={label} />
+        <label htmlFor={label}>{label}</label>
+    </li>
+);
+
+const ColorCheckbox = ({ label }) => (
+    <div className="checkCouleur">
+        <input type="checkbox" name={label} id={label} />
+        <label htmlFor={label}>{label}</label>
+    </div>
+);
+
+const UniverseCheckbox = ({ label }) => (
+    <div className="checkUnivers">
+        <input type="checkbox" name={label} id={label} />
+        <label htmlFor={label}>{label}</label>
+    </div>
+);
+
 export default Filter;
